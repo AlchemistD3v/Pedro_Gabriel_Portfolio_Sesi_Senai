@@ -1,18 +1,22 @@
 body {
-  color: aliceblue; 
-  background-color: black;
-
+color: aliceblue; 
+background-color: black;
+justify-content: center;
+display: flex;
+flex-direction: row;
+text-align: center;
 }
 
 .botaobarra {
-  background-color: aliceblue;
-  color: black;
-  border: none;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 3px;
-  width: 200px;
-  height: 27px; 
+background-color: aliceblue;
+color: black;
+border: none;
+font-size: 12px;
+font-weight: bold;
+border-radius: 3px;
+width: 200px;
+height: 27px; 
+text-align: center;
 }
 
 .botaobox {
@@ -28,12 +32,26 @@ border-radius: 180%;
 }
 
 .BolhaFotoDePerfil {
-display: flex;
 margin-top: 50px;
 margin-bottom: 50px;
+
 
 }
 
 .Principal{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+align-content: center;
+text-align: center;
+}
+.box{
+background-color: #45556C;
+border-radius: 10px;
+height: 80rem;
+width: 50rem;
+align-items: center;
+justify-content: center;
+margin-top: 100px;
+margin-bottom: 100px;
+text-align: center;
+
 }
