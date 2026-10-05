@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { BarraDeNav } from './components/BarraDeNav'
 import { Menu } from './components/Menu'
-import Sesi from './components/SesiAba'
+import SesiAba from './components/SesiAba'
 import EscolhaSesiOuSenai from './components/EscolhaSesiOuSenai'
 
 function App() {
