@@ -1,57 +1,115 @@
 body {
-color: aliceblue; 
-background-color: black;
-justify-content: center;
-display: flex;
-flex-direction: row;
-text-align: center;
-}
-
-.botaobarra {
-background-color: aliceblue;
-color: black;
-border: none;
-font-size: 12px;
-font-weight: bold;
-border-radius: 3px;
-width: 200px;
-height: 27px; 
-text-align: center;
+  color: aliceblue; 
+  background-color: #071D2C; 
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }
 
 .botaobox {
-display: flex;
-gap: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
 }
 
-.FotoPerfil {
-width: 300px;
-height: 300px;
-border-radius: 180%;
-
+.botaobarra {
+  background-color: #1A2E3E; 
+  color: aliceblue;
+  border: none;
+  font-size: 20px; 
+  font-style: italic;
+  font-weight: 900;
+  border-radius: 10px;
+  width: 140px;
+  height: 50px; 
+  text-align: center;
+  cursor: pointer;
 }
 
-.BolhaFotoDePerfil {
-margin-top: 50px;
-margin-bottom: 50px;
-
-
+.botaobarra.ativo {
+  background-color: #314457; 
+  color: white;
 }
 
-.Principal{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-align-content: center;
-text-align: center;
+.Principal {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
-.box{
-background-color: #45556C;
-border-radius: 10px;
-height: 80rem;
-width: 50rem;
-align-items: center;
-justify-content: center;
-margin-top: 100px;
-margin-bottom: 100px;
-text-align: center;
 
+.box {
+  background-color: #112231; 
+  border-radius: 25px; 
+  padding: 30px 20px;
+  width: 32rem; 
+  min-height: 80vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topousuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.nomealuno, .turmaaluno, .itinerarioaluno {
+  background-color: #1A2E3E;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.caixaconteudo {
+  background-color: #1A2E3E;
+  border-radius: 15px;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 25px;
+}
+
+.caixamaterias {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.botaomateria {
+  background-color: #1A2E3E;
+  color: aliceblue;
+  padding: 10px 8px;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 110px;
+  min-width: 110px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+  flex-shrink: 0;
 }

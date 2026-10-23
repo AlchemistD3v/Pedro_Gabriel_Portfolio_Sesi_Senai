@@ -1,37 +1,39 @@
- import { useState } from "react";
- export const EscolhaSesiOuSenai = ({Sesi})=>{
-    const [sesi, setSesi] = useState(true)
+import { useState } from "react";
 
+export const EscolhaSesiOuSenai = ({ Sesi }) => {
+  const [sesi, setSesi] = useState(true)
 
-    return(
-    
+  return (
     <>
-    
-        <div className="Principal">
+      <div className="Principal">
         <div className="botaobox"> 
-        <button className="botaobarra" onClick={()=>{
-            
-                setSesi(true)
-                if(Sesi){
-                    Sesi(true)
-                }
-        }}>SESI</button> 
-        <button className="botaobarra" onClick={()=>{
-           
-                setSesi(false)
-            if(Sesi){
-                    Sesi(false)
-                }
-           
-        }}>SENAI</button> 
+          <button 
+            className={`botaobarra ${sesi ? "ativo" : ""}`} 
+            onClick={() => {
+              setSesi(true)
+              if (Sesi) {
+                Sesi(true)
+              }
+            }}
+          >
+            SESI
+          </button> 
+          
+          <button 
+            className={`botaobarra ${!sesi ? "ativo" : ""}`} 
+            onClick={() => {
+              setSesi(false)
+              if (Sesi) {
+                Sesi(false)
+              }
+            }}
+          >
+            SENAI
+          </button> 
         </div>
-        </div>
+      </div>
     </>
-
-    )
+  )
 }
 
 export default EscolhaSesiOuSenai;
- 
- 
- 

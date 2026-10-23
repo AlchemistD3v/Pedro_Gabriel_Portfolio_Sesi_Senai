@@ -1,27 +1,26 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { BarraDeNav } from './components/BarraDeNav'
 import { Menu } from './components/Menu'
 import SesiAba from './components/SesiAba'
+import SenaiAba from './components/SenaiAba'
 import EscolhaSesiOuSenai from './components/EscolhaSesiOuSenai'
 
 function App() {
-const [sesi,setSesi] = useState()
+  const [sesi, setSesi] = useState(true)
 
-useEffect(()=>{
-console.log(sesi)
-},[sesi])
+  useEffect(() => {
+    console.log(sesi)
+  }, [sesi])
+
   return (
-  <>
-  <div className='box'>
-  <Menu></Menu>
-  <BarraDeNav></BarraDeNav>
-  <EscolhaSesiOuSenai Sesi={setSesi}></EscolhaSesiOuSenai>
-  { sesi && <SesiAba></SesiAba>}
-  {!(sesi) }
-
-  </div>
-  </>
+    <>
+      <div className='box'>
+        <Menu></Menu>
+        <EscolhaSesiOuSenai Sesi={setSesi}></EscolhaSesiOuSenai>
+        {sesi && <SesiAba></SesiAba>}
+        {!sesi && <SenaiAba></SenaiAba>}
+      </div>
+    </>
   )
 }
 
