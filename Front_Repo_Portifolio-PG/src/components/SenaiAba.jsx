@@ -11,7 +11,7 @@ export const SenaiAba = () => {
           <div className="botaomateria">PROJETO DE FRONT-END</div>
           <div className="botaomateria">PROJETO INTEGRADOR II</div>
           <div className="botaomateria">TESTES DE BACK-END</div>
-          <div className="botaomateria">TESTES DE FRONT-END</div>
+          <div className="botaomateria">TESTES DE FRONT-END</div>  
         </div>
       </div>
     </>
