@@ -1,6 +1,5 @@
 import { Aluno } from "../models/index.js";
 
-// O aluno é um único registro (id = 1).
 async function buscar(req, res) {
   try {
     const aluno = await Aluno.findByPk(1);

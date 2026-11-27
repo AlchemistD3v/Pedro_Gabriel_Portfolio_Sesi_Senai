@@ -4,5 +4,6 @@ import Materia from "./Materia.js";
 import Projeto from "./Projeto.js";
 import Geral from "./Geral.js";
 import Conteudo from "./Conteudo.js";
+import Imagem from "./Imagem.js";
 
-export { sequelize, Aluno, Materia, Projeto, Geral, Conteudo };
+export { sequelize, Aluno, Materia, Projeto, Geral, Conteudo, Imagem };

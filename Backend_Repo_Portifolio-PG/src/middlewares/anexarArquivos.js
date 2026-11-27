@@ -1,16 +1,31 @@
-// Pega o caminho do arquivo enviado e coloca no corpo da requisição.
-function anexarArquivos(req, res, next) {
-  if (req.file) {
-    req.body[req.file.fieldname] = `/uploads/${req.file.filename}`;
-  }
+import { Imagem } from "../models/index.js";
 
-  if (req.files) {
-    for (const campo in req.files) {
-      req.body[campo] = `/uploads/${req.files[campo][0].filename}`;
+async function salvarArquivo(arquivo) {
+  const imagem = await Imagem.create({
+    nome: arquivo.originalname,
+    mime: arquivo.mimetype,
+    dados: arquivo.buffer,
+  });
+
+  return `/api/imagens/${imagem.id}`;
+}
+
+async function anexarArquivos(req, res, next) {
+  try {
+    if (req.file) {
+      req.body[req.file.fieldname] = await salvarArquivo(req.file);
     }
-  }
 
-  next();
+    if (req.files) {
+      for (const campo in req.files) {
+        req.body[campo] = await salvarArquivo(req.files[campo][0]);
+      }
+    }
+
+    next();
+  } catch (erro) {
+    next(erro);
+  }
 }
 
 export default anexarArquivos;

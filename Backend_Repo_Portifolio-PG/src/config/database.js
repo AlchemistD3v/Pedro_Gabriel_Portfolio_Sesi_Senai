@@ -1,15 +1,19 @@
 import { Sequelize } from "sequelize";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const sequelize = new Sequelize(
-  process.env.DB_NAME || "portfolio",
-  process.env.DB_USER || "root",
-  process.env.DB_PASSWORD || "",
-  {
-    host: process.env.DB_HOST || "localhost",
-    port: Number(process.env.DB_PORT || 3306),
-    dialect: "mysql",
-    logging: false,
-  },
-);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const pastaBanco = path.resolve(__dirname, "../../database");
+
+fs.mkdirSync(pastaBanco, { recursive: true });
+
+const sequelize = new Sequelize({
+  dialect: "sqlite",
+  storage: path.join(pastaBanco, "portfolio.sqlite"),
+  logging: false,
+});
 
 export default sequelize;

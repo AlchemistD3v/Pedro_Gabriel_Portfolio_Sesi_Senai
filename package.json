@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-sesi-senai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm run install:all",
+    "install:all": "npm install --prefix Backend_Repo_Portifolio-PG && npm install --prefix Frontend_Repo_Portifolio-PG",
+    "dev": "concurrently \"npm run dev --prefix Backend_Repo_Portifolio-PG\" \"npm run dev --prefix Frontend_Repo_Portifolio-PG\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

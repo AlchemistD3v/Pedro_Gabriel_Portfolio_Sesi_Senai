@@ -2,6 +2,7 @@ import "dotenv/config";
 
 import app from "./app.js";
 import { sequelize } from "./models/index.js";
+import semearDados from "./config/semente.js";
 
 const PORT = process.env.PORT || 3001;
 
@@ -10,11 +11,9 @@ async function iniciarServidor() {
     await sequelize.authenticate();
 
     console.log("Banco de dados conectado!");
-
-    // Cria só as tabelas que ainda não existem. Não altera as que já estão no banco.
+    
     await sequelize.sync();
-
-    console.log("Tabelas sincronizadas!");
+    await semearDados();
 
     app.listen(PORT, () => {
       console.log(`Servidor rodando na porta ${PORT}`);

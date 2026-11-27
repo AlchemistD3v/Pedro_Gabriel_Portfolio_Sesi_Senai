@@ -34,7 +34,6 @@ async function listarDoGeral(req, res) {
   }
 }
 
-// Salva um item de conteúdo, ligado a uma matéria ou a um geral.
 async function salvar(req, res, vinculo) {
   try {
     const { tipo, texto, ordem, arquivo } = req.body;

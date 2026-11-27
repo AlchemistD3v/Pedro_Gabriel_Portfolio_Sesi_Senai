@@ -1,4 +1,3 @@
-// Monta as ações básicas de um model: listar, buscar, criar, atualizar e excluir.
 function criarCrud(Model, camposPermitidos, opcoes = {}) {
   const selecionarCampos = (dados) => {
     const resultado = {};
