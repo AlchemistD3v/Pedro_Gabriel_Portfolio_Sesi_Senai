@@ -131,6 +131,7 @@ body {
 }
 
 .blococonteudo img,
+
 .blococonteudo video {
   display: block;
   max-width: 100%;
