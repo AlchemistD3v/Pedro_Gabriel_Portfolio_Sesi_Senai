@@ -3,7 +3,7 @@
 
 ## Como usar/rodar
 
-No terminal do Frontend e do Backend do projeto:
+No terminal do Frontend e do Backend, execute o comando individualmente em cada um dos dois terminais, copiando e colando exatamente como está indicado abaixo. O mesmo comando deve ser inserido nos dois terminais.
 
 ```bash
 npm install
@@ -11,13 +11,6 @@ npm run dev
 ```
 
 Abra **http://localhost:5173**.
-
-Ou, se preferir, em dois terminais:
-
-```bash
-cd Backend_Repo_Portifolio-PG && npm install && npm run dev
-cd Frontend_Repo_Portifolio-PG && npm install && npm run dev
-```
 
 O backend sobe na porta **3001** e o frontend na **5173**.  
 Na primeira execução o banco SQLite é criado e os dados iniciais (aluno, matérias e abas gerais) são inseridos automaticamente.
